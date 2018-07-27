@@ -1,0 +1,39 @@
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+img{
+  width: 100%;
+  vertical-align: top;
+}
+
+.hero-banner-container {
+  max-width: 1180px;
+  overflow: hidden;
+  .pending-icon{
+    display: none;
+  }
+  .api-error-text{
+    display: none;
+    color: black; 
+  }
+
+  .list-items{
+    display: flex;
+    width: 300%; // item length * 100
+    .list-item{
+      width: 100%;
+      & > a{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .banner-controls{
+    
+  }
+}
