@@ -1,9 +1,10 @@
 import debounce from "lodash/debounce";
+import 'whatwg-fetch'
 
 class HeroBanner {
   constructor({ el, opt={} }) {
-    const infinity = opt.infinity || true
-    const autoSlide = opt.autoSlide || false
+    const infinity = opt.infinity === undefined ? true : opt.infinity
+    const autoSlide = opt.autoSlide === undefined ? false : opt.autoSlide
     this.store = {
       data: {
         el,
@@ -267,7 +268,7 @@ class HeroBanner {
           } else if (e.target.classList.contains("next-btn")) {
             store.increaseIndex();
           } else {
-            store.setIndex(parseInt(e.target.dataset.id));
+            store.setIndex(parseInt(e.target.getAttribute('data-id')));
           }
           const newIdx = store.getProps("index");
           slides[newIdx].removeAttribute("tabindex");
