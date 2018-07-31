@@ -4,8 +4,7 @@ import HeroBanner from './HeroBanner'
 const hb = new HeroBanner({
   el: '.hero-banner-container',
   opt: {
-    infinity: false,
-    autoSlide: false
+    autoSlide: true
   }
 })
 

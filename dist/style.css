@@ -1,0 +1,118 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+.hero-banner-container {
+  position: relative;
+  max-width: 1180px;
+  overflow: hidden;
+}
+.hero-banner-container .pending-icon {
+  display: none;
+}
+.hero-banner-container .api-error-text {
+  display: none;
+  color: black;
+}
+.hero-banner-container .list-items {
+  position: relative;
+  display: flex;
+}
+.hero-banner-container .list-items.transition {
+  transition: transform 0.5s ease-out;
+}
+.hero-banner-container .list-items .list-item {
+  width: 100%;
+  background: #eaeaea;
+}
+.hero-banner-container .list-items .list-item > a {
+  display: block;
+  width: 100%;
+}
+.hero-banner-container .list-items .fake-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+}
+.hero-banner-container .list-items .fake-item.before {
+  left: -100%;
+}
+.hero-banner-container .list-items .fake-item.after {
+  right: -100%;
+}
+.hero-banner-container .banner-controls {
+  width: 100%;
+}
+.hero-banner-container .banner-controls button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.hero-banner-container .banner-controls .prev-btn,
+.hero-banner-container .banner-controls .next-btn {
+  position: absolute;
+  bottom: 50%;
+  width: 20px;
+  height: 40px;
+  transform: translateY(50%);
+  text-indent: 100%;
+  font-size: 0;
+  overflow: hidden;
+  background: transparent;
+}
+.hero-banner-container .banner-controls .prev-btn.disabled,
+.hero-banner-container .banner-controls .next-btn.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.hero-banner-container .banner-controls .prev-btn:before,
+.hero-banner-container .banner-controls .next-btn:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.hero-banner-container .banner-controls .prev-btn {
+  left: 30px;
+}
+.hero-banner-container .banner-controls .prev-btn:before {
+  left: 7px;
+}
+.hero-banner-container .banner-controls .next-btn {
+  right: 30px;
+}
+.hero-banner-container .banner-controls .next-btn:before {
+  right: 7px;
+}
+.hero-banner-container .banner-controls .indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-banner-container .banner-controls .indicator {
+  margin: 0 5px;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  opacity: 0.5;
+  text-indent: 100%;
+  font-size: 0;
+  overflow: hidden;
+}
+.hero-banner-container .banner-controls .indicator.active {
+  opacity: 1;
+}

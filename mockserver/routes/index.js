@@ -7,9 +7,9 @@ router.get('/', function(req, res, next) {
 var desktop = require('../desktop.json')
 var mobile = require('../mobile.json')
 router.get('/banners', function(req, res, next) {
-  if(req.query.device="desktop"){
+  if(req.query.device === "desktop"){
     res.send(desktop)
-  } else if (req.query.device="mobile") {
+  } else if (req.query.device === "mobile") {
     res.send(mobile)
   }
 });

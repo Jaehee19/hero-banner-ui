@@ -2,20 +2,20 @@
   "mobile":
   [
     {
-      "image": "//cdn.lezhin.com/v2/inventory_items/6272864723140608/media/upperBann erMobile", 
-      "link": "/ko/payment"
+      "image": "https://dummyimage.com/768 x 450/77b9fc/ffffff.jpg&text=m-banner+01",
+      "link": "#m-banner01"
     },
     {
-      "image": "//cdn.lezhin.com/v2/inventory_items/4537033910124544/media/upperBann erMobile", 
-      "link": "/ko/page/sale1704W1_ALL"
+      "image": "https://dummyimage.com/768 x 450/a778fa/ffffff.jpg&text=m-banner+02",
+      "link": "#m-banner02"
     },
     {
-      "image": "//cdn.lezhin.com/v2/inventory_items/5439666241929216/media/upperBann erMobile", 
-      "link": "/ko/comic/dalbox"
+      "image": "https://dummyimage.com/768 x 450/fa78a5/ffffff.jpg&text=m-banner+03",
+      "link": "#m-banner03"
     },
     {
-      "image": "//cdn.lezhin.com/v2/inventory_items/6120926790549504/media/upperBann erMobile", 
-      "link": "/ko/novel/leviathan" 
+      "image": "https://dummyimage.com/768 x 450/faae78/ffffff.jpg&text=m-banner+04",
+      "link": "#m-banner04"
     }
   ]
 }

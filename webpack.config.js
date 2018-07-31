@@ -3,9 +3,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
-    filename: '[name].js',
+    filename: 'herobanner.js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {

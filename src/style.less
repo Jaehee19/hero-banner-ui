@@ -11,6 +11,7 @@ img{
 }
 
 .hero-banner-container {
+  position: relative;
   max-width: 1180px;
   overflow: hidden;
   .pending-icon{
@@ -22,18 +23,97 @@ img{
   }
 
   .list-items{
+    &.transition{
+      transition: transform .5s ease-out;
+    }
+    position: relative;
     display: flex;
-    width: 300%; // item length * 100
     .list-item{
       width: 100%;
+      background: #eaeaea;
       & > a{
         display: block;
         width: 100%;
       }
     }
+    .fake-item{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #eaeaea;
+      &.before{
+        left: -100%
+      }
+      &.after{
+        right: -100%
+      }
+    }
   }
 
   .banner-controls{
-    
+    width: 100%;
+    & button {
+      padding: 0;
+      border:none;
+      cursor: pointer;
+    }
+    .prev-btn,
+    .next-btn{
+      position: absolute;
+      bottom: 50%;
+      width: 20px;
+      height: 40px;
+      transform: translateY(50%);
+      text-indent: 100%;
+      font-size: 0;
+      overflow: hidden;
+      background: transparent;
+      &.disabled{
+        opacity: .5;
+        cursor: default;
+      }
+      &:before{
+        position: absolute;
+        display: block;
+        content: "";
+        top: 3px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #fff;
+        transform: rotate(45deg);
+      }
+    }
+    .prev-btn{
+      left: 30px;
+      &:before{
+        left: 7px;
+      }
+    }
+    .next-btn{
+      right: 30px;
+      &:before{
+        right: 7px;
+      }
+    }
+    .indicators{
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+    .indicator{
+      margin: 0 5px;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      opacity: .5;
+      text-indent: 100%;
+      font-size: 0;
+      overflow: hidden;
+      &.active{
+        opacity: 1;
+      }
+    }
   }
 }
