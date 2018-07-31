@@ -22,25 +22,31 @@ img {
   color: black;
 }
 .hero-banner-container .list-items {
-  position: relative;
   display: flex;
+  display: -ms-flexbox;
 }
 .hero-banner-container .list-items.transition {
   transition: transform 0.5s ease-out;
 }
 .hero-banner-container .list-items .list-item {
-  width: 100%;
   background: #eaeaea;
 }
 .hero-banner-container .list-items .list-item > a {
   display: block;
   width: 100%;
 }
+.hero-banner-container .list-items .list-item > a > img {
+  outline: none;
+  border: none;
+}
 .hero-banner-container .list-items .fake-item {
   position: absolute;
-  width: 100%;
   height: 100%;
   background: #eaeaea;
+}
+.hero-banner-container .list-items .fake-item > img {
+  outline: none;
+  border: none;
 }
 .hero-banner-container .list-items .fake-item.before {
   left: -100%;
@@ -66,7 +72,7 @@ img {
   text-indent: 100%;
   font-size: 0;
   overflow: hidden;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 .hero-banner-container .banner-controls .prev-btn.disabled,
 .hero-banner-container .banner-controls .next-btn.disabled {

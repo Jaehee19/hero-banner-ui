@@ -11,7 +11,7 @@ class HeroBanner {
         infinity,
         autoSlide,
         index: 0,
-        device: window.innerWidth > 768 ? "desktop" : "mobile", // 'desktop' || 'mobile'
+        device: window.innerWidth > 768 ? "desktop" : "mobile",
         bannerData: [],
         intervalFn: null
       }
@@ -239,7 +239,9 @@ class HeroBanner {
         };
 
         if(store.getProps('autoSlide')){
+          let isStop = false
           const intervalHandler = () => {
+            if(isStop) return
             const oldIdx = store.getProps('index')
             store.increaseIndex()
             slideTo(store.getProps('index'), oldIdx, listItems)
@@ -248,6 +250,13 @@ class HeroBanner {
           store.setIntervalFn(
             setInterval(intervalHandler, 3000)
           )
+
+          container.addEventListener('mouseover',()=>{
+            isStop = true;
+          })
+          container.addEventListener('mouseleave',()=>{
+            isStop = false;
+          })
 
         }
 
@@ -302,11 +311,9 @@ class HeroBanner {
                 listItems.style.transform = `translateX(${((100 * movedX) / slidersWid) * 0.5 + resultPercent}%)`;
               } else {
                 if (store.getProps("index") === 0 && movedX > 0) {
-                  console.log("first back");
-                  // listItems.style.transform = `translateX(${((100 * movedX) / slidersWid) * ease + resultPercent}%)`;
+
                 } else if ( store.getProps("index") === store.getProps("bannerData").length - 1 && movedX < 0 ) {
-                  console.log("last next");
-                  // listItems.style.transform = `translateX(${((100 * movedX) / slidersWid) * ease + resultPercent}%)`;
+                  
                 } else {
                   listItems.style.transform = `translateX(${((100 * movedX) / slidersWid) * 0.5 + resultPercent}%)`;
                 }
